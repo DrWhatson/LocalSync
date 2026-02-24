@@ -2,7 +2,7 @@
 LocalSync: Local Bubble Synchrotron Model
 
 Physical synchrotron emission model with 3D Local Bubble tomography.
-Part of RadioForegroundsPlus WP4.1.
+
 """
 
 from setuptools import setup, find_packages
@@ -20,7 +20,7 @@ else:
 setup(
     name='localsync',
     version='0.1.0',
-    author='WP4.1 RadioForegroundsPlus Team',
+    author='LocalSync Contributors',
     author_email='',
     description='Physical Synchrotron Emission Model with Moment Expansion',
     long_description=long_description,

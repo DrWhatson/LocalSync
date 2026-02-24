@@ -6,11 +6,11 @@ synchrotron models (JP, KP, CI) with moment expansion for fast fitting.
 
 Based on the SpyDust formalism applied to synchrotron emission.
 
-Part of RadioForegroundsPlus WP4.1 - "The Synchrotron Emission Model"
+
 """
 
 __version__ = "0.1.0"
-__author__ = "WP4.1 RadioForegroundsPlus Team"
+__author__ = "LocalSync Contributors"
 
 from .models import jp_model, kp_model, ci_model, besselK53, standard_model
 from .basis import compute_moment_basis, MomentBasis
