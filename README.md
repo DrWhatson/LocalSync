@@ -1,7 +1,5 @@
 # LocalSync: Physical Synchrotron Emission Model
 
-**WP4.1 RadioForegroundsPlus Deliverable**
-
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -28,8 +26,8 @@ SED(ν; s, ν_b) ≈ SED₀(ν) + (s-s₀)·∂SED/∂s + (log ν_b - log ν_{b,
 ## Installation
 
 ```bash
-git clone https://github.com/radioforegroundsplus/localsync.git
-cd localsync
+git clone https://github.com/DrWhatson/LocalSync.git
+cd LocalSync
 pip install -e .
 ```
 
@@ -61,34 +59,34 @@ print(f"Reduced χ²: {result['chi2_reduced']:.2f}")
 
 - **Physical Models**: JP, KP, CI-on, CI-off synchrotron models
 - **Moment Expansion**: Fast linear fitting via precomputed derivatives
-- **Spatial Fitting**: Fit entire sky cubes with `SpatialFitter`
+- **Spatial Fitting**: Fit entire sky cubes with spatial regularization
 - **Tomography**: 3D Local Bubble reconstruction (in development)
-- **Hybrid ML**: Physics-informed neural network support
+- **Light Box**: Iterative fitting of foreground (LB) + background (Galaxy)
 
 ## Documentation
 
 See `examples/` directory for:
 - `example_basic_fit.py`: Simple spectrum fitting
-- `example_spatial_fit.py`: Fitting sky maps
 - `example_tomography.py`: 3D Local Bubble reconstruction
+- `example_lightbox.py`: Iterative foreground/background fitting
 
-## WP4.1 Context
-
-LocalSync is the deliverable for **RadioForegroundsPlus WP4.1**: "Modelling the diffuse Galactic synchrotron emission."
-
-**Current Status (M24)**: Core physics models and moment expansion implemented. Testing on WP3.2 synchrotron maps.
-
-**Target (M36)**: Validated 3D synchrotron model for Local Bubble and Galactic background.
+See `docs/TOMOGRAPHY.md` for detailed tomography documentation.
 
 ## Citation
 
 If you use LocalSync, please cite:
 
 ```
-RadioForegroundsPlus WP4.1 (2024). LocalSync: Physical Synchrotron Emission Model.
+LocalSync: Physical Synchrotron Emission Model.
 Based on moment expansion from SpyDust (Zhang et al. 2024) and
 synchrotron models from Turner & Quici (2018).
 ```
+
+## References
+
+- **SpyDust**: Zhang et al. (2024) - Moment expansion formalism
+- **synchrofit**: Turner & Quici (2018) - JP/KP/CI synchrotron models
+- **ONeill2024**: O'Neill et al. (2024) - Local Bubble 3D magnetic field
 
 ## License
 
@@ -96,5 +94,4 @@ MIT License - see LICENSE file.
 
 ## Contact
 
-WP4.1 Lead: MAN (University of Manchester)
-Project: RadioForegroundsPlus
+For questions and contributions, please open an issue on GitHub.
